@@ -48,7 +48,7 @@ class chatserver():
             #当读入列表readlist中没有可读信息时，即没有用户接入聊天室，则退出服务器
             if not readlist:
                 print('没有用户连接，聊天室关闭。。。')
-                self.disconnect() #关闭服务器端socket
+                self.disconnection() #关闭服务器端socket
                 break
             for client_socket in readlist:
                 if client_socket is self.server_socket:
